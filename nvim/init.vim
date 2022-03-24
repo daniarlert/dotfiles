@@ -6,9 +6,9 @@ set ignorecase                 " case insensitive
 set mouse=a                    " enable mouse click
 set hlsearch                   " highligh search
 set incsearch                  " incremental search
-set tabstop=4                  " number of columns per tab
+set tabstop=2                  " number of columns per tab
 set softtabstop=0
-set shiftwidth=4               " width for autoindents
+set shiftwidth=2               " width for autoindents
 set autoindent
 set wildmode=longest,list      " bash-like completions
 set number                     " line numbers
@@ -50,7 +50,7 @@ let g:lightline={
 	\ 'colorscheme':'nord',
 	\ 'active':{
 	\		'left':[['mode','paste'],['readonly','filename', 'modified']]
-	\	},
+	\ },
 	\ }
 
 " NERDTree
@@ -74,9 +74,13 @@ let g:go_highlight_trailing_whitespace_error = 0
 let g:go_highlight_extra_types = 1
 
 " Vimwiki
-let g:vimwiki_list = [{'path': '~/Documentos/Brain/', 'syntax': 'markdown', 'ext': '.md'}]
+let g:vimwiki_list = [
+	\ {
+	\ 'path': '~/Documentos/Brain/',
+	\ 'syntax': 'markdown', 'ext': '.md'
+	\ }]
 
-" FZF-like
+" FZF-like search
 " :find * makes a fuzzy search
 " :b lets autocomplete any open buffer
 set path+=**
@@ -94,3 +98,25 @@ cnoreabbrev Qall qall
 nnoremap <Leader>h :<C-u>split<CR>
 nnoremap <Leader>v :<C-u>vsplit<CR>
 
+" Startify
+let g:startify_custom_header = [
+	\ ' ________   _______   ________  ___      ___ ___  _____ ______',
+	\ '|\   ___  \|\  ___ \ |\   __  \|\  \    /  /|\  \|\   _ \  _   \',
+	\ '\ \  \\ \  \ \   __/|\ \  \|\  \ \  \  /  / | \  \ \  \\\__\ \  \',
+	\ ' \ \  \\ \  \ \  \_|/_\ \  \\\  \ \  \/  / / \ \  \ \  \\|__| \  \',
+	\ '  \ \  \\ \  \ \  \_|\ \ \  \\\  \ \    / /   \ \  \ \  \    \ \  \',
+	\ '   \ \__\\ \__\ \_______\ \_______\ \__/ /     \ \__\ \__\    \ \__\',
+	\ '    \|__| \|__|\|_______|\|_______|\|__|/       \|__|\|__|     \|__|',
+	\]
+
+let g:startify_lists = [
+	\ { 'type': 'bookmarks', 'header': [' Bookmarks '] },
+	\ { 'type': 'files', 'header': [' Files '] },
+	\ ]
+
+let g:startify_bookmarks = [
+	\ { 'v' : '~/.config/nvim/init.vim' },
+	\ { 'z' : '~/.zshrc' },
+	\ { 'g' : '~/.gitconfig' },
+	\ { 'c' : '~/Documentos/Code' },
+\ ]
