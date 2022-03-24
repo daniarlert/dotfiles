@@ -1,0 +1,28 @@
+[credential "https://github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+
+[alias]
+	l = log --pretty=oneline -n 20 --graph --abbrev-commit
+	s = status -s
+	c = clone --recursive
+	d = diff
+	co = checkout
+	ci = commit
+	ca = commit -a
+	st = status
+	tags = tag -l
+	branches = branch -a
+	remotes = remote -v
+	amend = commit --amend --reuse-message=HEAD
+[apply]
+	whitespace = fix
+[core]
+	editor = vim
+[color]
+	ui = auto
+[help]
+	autocorrect = 1
