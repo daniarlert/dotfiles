@@ -1,10 +1,12 @@
 set encoding=utf-8
 set fileencoding=utf-8
+set spell                             " spellchecking
+set spelllang=en_us,es_es
 set nocompatible                      " disable compatibility to old-time vim
 set showmatch                         " show matching
 set ignorecase                        " case insensitive
 set mouse=a                           " enable mouse click
-set hlsearch                          " highligh search
+set hlsearch                          " highlight search
 set incsearch                         " incremental search
 set tabstop=2                         " number of columns per tab
 set softtabstop=0
@@ -122,8 +124,10 @@ let g:startify_bookmarks=[
 	\ { 'c' : '~/Documentos/Code' },
 \ ]
 
-" lsp_installer
+" lsp_installer & lspsaga
 lua << END
+
+-- ls_installer
 local lsp_installer = require 'nvim-lsp-installer'
 
 -- Registers a handler that will be called for each installed lsp server
@@ -132,12 +136,10 @@ lsp_installer.on_server_ready(function(server)
 	-- No options passed to the server
 	server:setup({})
 end)
-END
 
-" lspsaga
-lua << END
-	local saga = require 'lspsaga'
-	saga.init_lsp_saga()
+-- lspsaga
+local saga = require 'lspsaga'
+saga.init_lsp_saga()
 END
 
 nnoremap <silent> gh :Lspsaga lsp_finder<CR>
