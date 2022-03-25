@@ -19,6 +19,7 @@ plugins=(git node nvm)
 source $ZSH/oh-my-zsh.sh
 
 ### Aliases ###
+alias :q='exit'
 alias vim='nvim'
 alias cls='clear'
 
