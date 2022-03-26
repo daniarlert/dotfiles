@@ -1,6 +1,6 @@
 set encoding=utf-8
 set fileencoding=utf-8
-set spell                             " spellchecking
+set spell                             " spell checking
 set spelllang=en_us,es_es
 set nocompatible                      " disable compatibility to old-time vim
 set showmatch                         " show matching
@@ -30,19 +30,7 @@ filetype plugin on
 filetype plugin indent on
 
 " Plugins
-call plug#begin("~/.vim/plugger")
-Plug 'arcticicestudio/nord-vim'
-Plug 'mhinz/vim-startify'
-Plug 'scrooloose/nerdtree'
-Plug 'jistr/vim-nerdtree-tabs'
-Plug 'ryanoasis/vim-devicons'
-Plug 'itchyny/lightline.vim'
-Plug 'vimwiki/vimwiki'
-Plug 'fatih/vim-go', {'do':':GoUpdateBinaries'}
-Plug 'neovim/nvim-lspconfig'
-Plug 'williamboman/nvim-lsp-installer'
-Plug 'glepnir/lspsaga.nvim'
-call plug#end()
+runtime ./plugins.vim
 
 " Map leader
 let mapleader=','
@@ -98,8 +86,8 @@ cnoreabbrev Q q
 cnoreabbrev Qall qall
 
 " Splits
-nnoremap <Leader>h :<C-u>split<CR>
-nnoremap <Leader>v :<C-u>vsplit<CR>
+nmap ss :split<CR>
+nmap sv :vsplit<CR>
 
 " Startify
 let g:startify_custom_header=[
@@ -124,29 +112,14 @@ let g:startify_bookmarks=[
 	\ { 'c' : '~/Documentos/Code' },
 \ ]
 
-" lsp_installer & lspsaga
+" lsp_installer
 lua << END
-
--- ls_installer
 local lsp_installer = require 'nvim-lsp-installer'
 
 -- Registers a handler that will be called for each installed lsp server
 lsp_installer.on_server_ready(function(server)
 
-	-- No options passed to the server
-	server:setup({})
+-- No options passed to the server
+server:setup({})
 end)
-
--- lspsaga
-local saga = require 'lspsaga'
-saga.init_lsp_saga()
 END
-
-nnoremap <silent> gh :Lspsaga lsp_finder<CR>
-nnoremap <silent><leader>ca :Lspsaga code_action<CR>
-vnoremap <silent><leader>ca :<C-U>Lspsaga range_code_action<CR>
-nnoremap <silent>K :Lspsaga hover_doc<CR>
-nnoremap <silent> <C-b> <cmd>lua require('lspsaga.action').smart_scroll_with_saga(-1)<CR>
-nnoremap <silent> gs :Lspsaga signature_help<CR>
-nnoremap <silent>gr :Lspsaga rename<CR>
-nnoremap <silent> gd :Lspsaga preview_definition<CR>
