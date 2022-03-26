@@ -4,6 +4,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 export PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:$HOME/go/bin/
 export PATH=$PATH:$HOME/.exercism
 export GOPATH=$HOME/go
 export GOBIN=$GOPATH/bin
@@ -18,16 +19,19 @@ plugins=(git node nvm)
 
 source $ZSH/oh-my-zsh.sh
 
-### Aliases ###
+# Aliases
 alias :q='exit'
 alias vim='nvim'
 alias cls='clear'
+alias weather='curl wttr.in'
 
 alias shutdown='sudo shutdown -h now'
 
 alias zshconf='vim ~/.zshrc'
 alias gconf='vim ~/.gitconfig'
 alias vconf='vim ~/.config/nvim/init.vim'
+alias vv='vconf'
+alias kittyconf='vim ~/.config/kitty/kitty.conf'
 
 alias upall='sudo apt update && sudo apt upgrade'
 alias upally='sudo apt update && sudo apt upgrade -y'
