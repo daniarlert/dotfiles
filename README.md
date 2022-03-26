@@ -10,6 +10,8 @@
 	- Some aspects of my workflow are managed using [gh](https://cli.github.com/)
 - zsh config
 	- Theme is [powerlevel10k](https://github.com/romkatv/powerlevel10k)
+- kitty config
+	- Theme is a version of [Nord](https://www.nordtheme.com/)
 
 ## About me
 
