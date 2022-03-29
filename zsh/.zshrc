@@ -6,6 +6,8 @@ fi
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:$HOME/go/bin/
 export PATH=$PATH:$HOME/.exercism
+export PATH=$PATH:$HOME/.local/bin
+
 export GOPATH=$HOME/go
 export GOBIN=$GOPATH/bin
 export ZSH="$HOME/.oh-my-zsh"
@@ -50,6 +52,8 @@ alias h='history'
 alias cp='cp -i'
 alias mv='mv -i'
 alias untar='tar xvf'
+
+alias icat="kitty +kitten icat"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

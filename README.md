@@ -4,14 +4,19 @@
 
 ## Contents
 
-- vim (NeoVim) config
-	- Plugins are managed with [vim-plug](https://github.com/junegunn/vim-plug)
-- git config
-	- Some aspects of my workflow are managed using [gh](https://cli.github.com/)
-- zsh config
-	- Theme is [powerlevel10k](https://github.com/romkatv/powerlevel10k)
-- kitty config
-	- Theme is a version of [Nord](https://www.nordtheme.com/)
+- vim (NeoVim) config.
+	- Plugins are managed with [vim-plug](https://github.com/junegunn/vim-plug).
+- git config.
+	- Some aspects of my workflow are managed using [gh](https://cli.github.com/).
+- zsh config.
+	- Theme is [powerlevel10k](https://github.com/romkatv/powerlevel10k).
+- kitty config.
+	- Theme is a version of [Nord](https://www.nordtheme.com/).
+- `gnome-terminal` config.
+
+## Other tools
+- My favorite note-taking application at the moment is [Obsidian](https://obsidian.md/).
+- As a file manager I currently use [lf](https://github.com/gokcehan/lf). Which is a terminal-file manager.
 
 ## About me
 
