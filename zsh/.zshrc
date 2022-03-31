@@ -37,9 +37,10 @@ alias gconf='vim ~/.gitconfig'
 alias vconf='vim ~/.config/nvim/init.vim'
 alias vv='vconf'
 alias kittyconf='vim ~/.config/kitty/kitty.conf'
+alias muttconf='vim ~/.config/neomutt/neomuttrc'
 
 alias upall='sudo pacman -Syy'
-alias upallu='sudp pacman -Syyu'
+alias upallu='sudo pacman -Syyu'
 
 alias .='cd ..'
 alias ..='cd ../../'
