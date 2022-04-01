@@ -14,6 +14,7 @@
 	- Theme is a version of [Nord](https://www.nordtheme.com/).
 - `gnome-terminal` config.
 - neofetch config.
+- newsboat config.
 
 ## Other tools
 - My favorite note-taking application at the moment is [Obsidian](https://obsidian.md/).
