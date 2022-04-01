@@ -29,6 +29,7 @@ alias :q='exit'
 alias vim='nvim'
 alias cls='clear'
 alias weather='curl wttr.in'
+alias news='newsboat'
 
 alias shutdown='sudo shutdown -h now'
 
@@ -38,6 +39,8 @@ alias vconf='vim ~/.config/nvim/init.vim'
 alias vv='vconf'
 alias kittyconf='vim ~/.config/kitty/kitty.conf'
 alias muttconf='vim ~/.config/neomutt/neomuttrc'
+alias newsrc='vim ~/.newsboat/urls'
+alias nfconf='vim ~/.config/neofetch/config.conf'
 
 alias upall='sudo pacman -Syy'
 alias upallu='sudo pacman -Syyu'
@@ -48,6 +51,7 @@ alias ...='cd ../../../'
 
 alias dl='cd ~/Descargas'
 alias docs='cd ~/Documentos'
+alias vault='cd ~/Documentos/Vault'
 
 alias g='git'
 alias v='vim'
